@@ -150,7 +150,15 @@ body {
 }
 
 a {
-  color: #2a5885;
+  color: #65829e;
+}
+
+img,
+.time {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .body__content {
@@ -496,18 +504,19 @@ a {
 
   .slider__content .content .reply .reply__content {
     margin-left: 57px;
+    line-height: 27px;
   }
 
   .slider__content .content .reply .reply__content .name {
-    font-size: 15px;
+    font-size: 21px;
   }
 
   .slider__content .content .reply .reply__content .text {
-    font-size: 14px;
+    font-size: 19px;
   }
 
   .slider__content .content .reply .reply__content .time {
-    font-size: 13px;
+    font-size: 17px;
   }
 
   .slider__content .nav {
