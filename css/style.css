@@ -94,24 +94,22 @@ h6 {
 
 header {
   background: #fff;
-  height: 50px;
-  width: 100%;
   position: fixed;
   top: 0;
   z-index: 1;
+  height: 50px;
+  width: 100%;
 }
 
 header .header {
+  margin: auto;
   width: 795px;
   height: 100%;
-  margin: auto;
 }
 
 header .ava {
-  padding: 5px;
-  width: 40px;
-  height: 40px;
   float: left;
+  padding: 5px;
 }
 
 header .ava img {
@@ -121,7 +119,7 @@ header .ava img {
 
 header .name_text_block {
   padding-top: 10px;
-  margin-left: 50px;
+  padding-bottom: 5px;
 }
 
 header .name_text_block .name_text {
@@ -141,6 +139,8 @@ header .name_text_block .name_text_2 {
   padding-top: 1px;
 }
 
+/* Адаптируем размеры под мобильные устройства */
+
 body {
   background: #edeef0;
   height: auto;
@@ -153,18 +153,18 @@ a {
   color: #2a5885;
 }
 
-.content {
+.body__content {
   width: 795px;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 65px;
 }
 
 .slider {
   position: relative;
   overflow: hidden;
-  max-width: 960px;
   margin: auto;
   border-radius: 5px;
+  max-width: 795px;
 }
 
 .slider__wrapper {
@@ -184,11 +184,11 @@ a {
 }
 
 .slider__item {
+  background: #fff;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   width: 100%;
-  background: #fff;
 }
 
 .slider__control {
@@ -201,15 +201,15 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 35px;
   color: #fff;
   text-align: center;
   opacity: 0.5;
-  height: 55px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
+  width: 35px;
+  height: 55px;
 }
 
 .slider__control_show {
@@ -277,10 +277,11 @@ a {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  width: 15px;
-  height: 4px;
-  margin-right: 2px;
-  margin-left: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+  margin-left: 4px;
   text-indent: -999px;
   cursor: pointer;
   background-color: rgba(73, 73, 73, 0.4);
@@ -302,6 +303,7 @@ a {
 .slider__content {
   height: 580px;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .slider__content::-webkit-scrollbar {
@@ -341,9 +343,9 @@ a {
 }
 
 .slider__content .content {
-  padding: 0 16px;
-  margin: 0;
+  margin: 0 16px;
   min-height: 441px;
+  width: 763px;
 }
 
 .slider__content .content .reply {
@@ -355,7 +357,6 @@ a {
 
 .slider__content .content .reply .photo {
   float: left;
-  margin-right: 12px;
   padding-top: 2px;
   width: 42px;
 }
@@ -370,7 +371,6 @@ a {
 .slider__content .content .reply .reply__content {
   text-align: left;
   margin-left: 54px;
-  max-width: 721px;
   line-height: 17px;
 }
 
@@ -411,4 +411,107 @@ a {
 .slider__content .nav .nav__p {
   margin-bottom: 14px;
   padding-top: 5px;
+}
+
+/* Адаптируем размеры под мобильные устройства */
+
+@media screen and (max-width: 10000px) {
+  .body__content {
+    width: 955px;
+    /* + 160px на моб */
+    margin-top: 75px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    height: 55px;
+  }
+
+  header .header {
+    width: 955px;
+  }
+
+  header .ava img {
+    height: 45px;
+    width: 45px;
+  }
+
+  header .name_text_block {
+    padding-top: 12px;
+  }
+
+  header .name_text_block .name_text {
+    font-size: 16px;
+  }
+
+  header .name_text_block .name_text_2 {
+    padding-top: 2px;
+    font-size: 15px;
+  }
+
+  .slider {
+    max-width: 955px;
+  }
+
+  .slider__content {
+    height: 580px;
+  }
+
+  .slider__content::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .slider__content .header {
+    padding: 11px 16px;
+    border-bottom: 2px solid #e7e8ec;
+  }
+
+  .slider__content .header p {
+    font-size: 16px;
+  }
+
+  .slider__content .header p:nth-child(2) {
+    font-size: 13.5px;
+  }
+
+  .slider__content .content {
+    min-height: 441px;
+    width: 923px;
+  }
+
+  .slider__content .content .reply {
+    border-top: 2px solid #e7e8ec;
+    font-size: 12.5px;
+  }
+
+  .slider__content .content .reply .photo {
+    width: 45px;
+  }
+
+  .slider__content .content .reply .photo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .slider__content .content .reply .reply__content {
+    margin-left: 57px;
+  }
+
+  .slider__content .content .reply .reply__content .name {
+    font-size: 15px;
+  }
+
+  .slider__content .content .reply .reply__content .text {
+    font-size: 14px;
+  }
+
+  .slider__content .content .reply .reply__content .time {
+    font-size: 13px;
+  }
+
+  .slider__content .nav {
+    border-top: 2px solid #e7e8ec;
+    font-size: 14px;
+  }
 }
