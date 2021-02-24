@@ -476,11 +476,11 @@ img,
   }
 
   .slider__content .header p {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .slider__content .header p:nth-child(2) {
-    font-size: 13.5px;
+    font-size: 15px;
   }
 
   .slider__content .content {
@@ -504,23 +504,23 @@ img,
 
   .slider__content .content .reply .reply__content {
     margin-left: 57px;
-    line-height: 27px;
+    line-height: 29px;
   }
 
   .slider__content .content .reply .reply__content .name {
-    font-size: 21px;
+    font-size: 23px;
   }
 
   .slider__content .content .reply .reply__content .text {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .slider__content .content .reply .reply__content .time {
-    font-size: 17px;
+    font-size: 18.5px;
   }
 
   .slider__content .nav {
     border-top: 2px solid #e7e8ec;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
