@@ -646,3 +646,9 @@ img,
     height: 1320px;
   }
 }
+
+@media screen and (min-height: 1500px) {
+  .slider__content {
+    height: 1420px;
+  }
+}
