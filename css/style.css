@@ -674,6 +674,10 @@ img,
     margin-top: 75px;
   }
 
+  body {
+    zoom: 110%;
+  }
+
   .slider {
     max-width: 955px;
   }
